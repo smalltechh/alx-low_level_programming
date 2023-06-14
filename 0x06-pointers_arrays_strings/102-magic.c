@@ -1,32 +1,23 @@
-#include "main.h"
 #include <stdio.h>
 
-/**
- * cap_string - ...
- * @s: ...
- *
- * Return: char value
- */
-char *cap_string(char *s)
+int main(void)
 {
-	int a = 0, i;
-	int cspc = 13;
-	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+  int n;
+  int a[5];
+  int *p;
 
-	while (s[a])
-	{
-		i = 0;
-
-		while (i < cspc)
-		{
-			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
-				s[a] -= 32;
-
-			i++;
-		}
-
-		a++;
-	}
-
-	return (s);
+  a[2] = 1024;
+  p = &n;
+  /*
+   * write your line of code here...
+   * Remember:
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
+   */
+  *(p + 5) = 98;
+  /* ...so that this prints 98\n */
+  printf("a[2] = %d\n", a[2]);
+  return (0);
 }
