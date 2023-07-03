@@ -1,19 +1,10 @@
-#include <stdlib.h>
 #include "lists.h"
-
 /**
- * free_list - frees a linked list
- * @head: list_t list to be freed
+ * before_main - function executed before main
+ * Return: void
  */
-void free_list(list_t *head)
+void before_main(void)
 {
-	list_t *temp;
-
-	while (head)
-	{
-		temp = head->next;
-		free(head->str);
-		free(head);
-		head = temp;
-	}
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
